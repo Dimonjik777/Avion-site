@@ -1,0 +1,147 @@
+@use 'sass:color';
+
+// Fonts
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import '_variables';
+
+// Mixins
+@import '_mixin';
+
+
+
+img{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+h1, h2, h3{
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+p, a{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+h1{
+  font-size: 32px;
+}
+
+h2{
+  font-size: 24px;
+}
+
+
+
+.view__collection{
+  margin: 0;
+  display: inline-block;
+  color: black;
+  background: rgba(249, 249, 249, 0.15);
+  padding: 20px 25px;
+  transition: 0.6s ease;
+  margin-top: 35px;
+
+  &:hover{
+    color: white;
+    background: invert($color: rgba(249, 249, 249, 0.15));
+  }
+}
+
+.container{
+  width: 1280px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+header{
+  @include flex;
+  width: 1385px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+
+  h1{
+   margin: 0;
+   margin: 20px 0;
+  }
+
+  .shop_login{
+
+    .shopping{
+      margin-right: 15px;
+    }
+
+  }
+}
+
+
+nav{
+  width: 645px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  .furniture{
+    @include flex;
+    
+    a{
+      color: #726E8D;
+    }
+  }
+}
+
+.first__screen{
+  color: white;
+  .container{
+    background-color: $primary;
+    padding-left: 60px;
+
+    @include flex;
+
+    .first__screen__left{
+      width: 500px;
+      
+      .view__collection{
+        color: white;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.advantages{
+
+  h2{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .advantages__content{
+    @include flex;
+
+    .advantage{
+      width: 270px;
+    }
+  }
+}
+
+.ceramics{
+
+  h2{
+    margin-bottom: 35px;
+  }
+  .ceramics__content{
+    @include flex;
+  }
+
+  .view__collection{
+   
+  }
+}

@@ -4,6 +4,7 @@
 @import url('https://fonts.cdnfonts.com/css/satoshi');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+@import '_base';
 @import '_variables';
 
 // Mixins
@@ -11,48 +12,24 @@
 
 
 
-img{
-  padding: 0;
+
+
+
+.btn{
   margin: 0;
-}
-
-a{
-  text-decoration: none;
-  color: #000;
-}
-
-h1, h2, h3{
-  font-family: 'Satoshi', sans-serif;
-}
-
-
-p, a{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-}
-
-h1{
-  font-size: 32px;
-}
-
-h2{
-  font-size: 24px;
-}
-
-
-
-.view__collection{
-  margin: 0;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   color: black;
-  background: rgba(249, 249, 249, 0.15);
-  padding: 20px 25px;
+  background: $grey;
+  padding: 20px 0;
+  width: 175px;
+  margin: 0 auto;
   transition: 0.6s ease;
   margin-top: 35px;
 
   &:hover{
     color: white;
-    background: invert($color: rgba(249, 249, 249, 0.15));
+    background: invert($color: rgba(249, 249, 249, 1));
   }
 }
 
@@ -108,9 +85,14 @@ nav{
     .first__screen__left{
       width: 500px;
       
-      .view__collection{
+      .btn{
         color: white;
-        margin-top: 0;
+        background: rgba(249, 249, 249, 0.15);
+        margin: 0;
+
+        &:hover{
+          background: invert($color: rgba(249, 249, 249, 0.15));
+        }
       }
     }
   }
@@ -140,8 +122,150 @@ nav{
   .ceramics__content{
     @include flex;
   }
+}
 
-  .view__collection{
-   
+.products{
+
+  h2{
+    margin-bottom: 35px;
+  }
+  .products__content{
+    @include flex;
+  }
+}
+
+.club{
+  background-color: $grey;
+  padding: 100px 100px;
+  margin-top: 80px;
+
+  .container{
+    background-color: white;
+    margin-top: 0;
+    @include flex;
+    flex-direction: column;
+    padding: 150px 150px;
+
+    h1{
+      font-size: 48px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    p{
+      font-size: 24px;
+      margin-top: 10px;
+      width: 600px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    form{
+      @include form;
+    }
+  }
+}
+
+.studio{
+  @include flex;
+  .container{
+    margin: 0;
+    margin-left: 125px;
+    width: 650px;
+
+    
+
+    .studio__left{
+
+      h2{
+        font-size: 36px;
+      }
+
+      p{
+        font-size: 18px;
+      }
+
+      .btn{
+        margin: 0;
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+footer{
+  background-color: $primary;
+  color: white;
+  padding: 0;
+  padding-top: 50px;
+
+  .container{
+
+    @include flex;
+    align-items: start;
+    margin-top: 0;
+
+    p{
+      font-weight: 700;
+    }
+
+    .list__links{
+      
+      ul{
+        padding: 0;
+
+        li{
+          list-style: none;
+          padding: 0;
+          padding-top: 15px;
+          
+          a{
+            color: white;
+          }
+        }
+      }
+    }
+
+    .mailing{
+
+      p{
+        font-weight: 700;
+      }
+
+      form{
+        @include form;
+
+        input:first-child{
+          background-color: rgba(249, 249, 249, 0.15);
+          color: white;
+
+          &::placeholder{
+            color: white;
+          }
+        }
+
+        input:last-child{
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.footer__bottom{
+  background-color: $primary;
+  border-top: 1px solid rgba(250, 250, 250, 0.15);
+  color: white;
+  
+  .container{
+    @include flex;
+    margin-top: 0;
+
+    .social__links{
+
+      img{
+        margin-left: 15px;
+      }
+    }
   }
 }

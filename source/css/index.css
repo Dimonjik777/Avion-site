@@ -5,6 +5,11 @@ img {
   margin: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -27,19 +32,26 @@ h2 {
   font-size: 24px;
 }
 
-.view__collection {
+.btn {
   margin: 0;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: black;
-  background: rgba(249, 249, 249, 0.15);
-  padding: 20px 25px;
+  background: rgb(249, 249, 249);
+  padding: 20px 0;
+  width: 175px;
+  margin: 0 auto;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   margin-top: 35px;
 }
-.view__collection:hover {
+.btn:hover {
   color: white;
-  background: rgba(6, 6, 6, 0.15);
+  background: #060606;
 }
 
 .container {
@@ -109,9 +121,13 @@ nav .furniture a {
 .first__screen .container .first__screen__left {
   width: 500px;
 }
-.first__screen .container .first__screen__left .view__collection {
+.first__screen .container .first__screen__left .btn {
   color: white;
-  margin-top: 0;
+  background: rgba(249, 249, 249, 0.15);
+  margin: 0;
+}
+.first__screen .container .first__screen__left .btn:hover {
+  background: rgba(6, 6, 6, 0.15);
 }
 
 .advantages h2 {
@@ -146,4 +162,283 @@ nav .furniture a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.products h2 {
+  margin-bottom: 35px;
+}
+.products .products__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.club {
+  background-color: rgb(249, 249, 249);
+  padding: 100px 100px;
+  margin-top: 80px;
+}
+.club .container {
+  background-color: white;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 150px 150px;
+}
+.club .container h1 {
+  font-size: 48px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.club .container p {
+  font-size: 24px;
+  margin-top: 10px;
+  width: 600px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.club .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.club .container form input:first-child {
+  background-color: rgb(249, 249, 249);
+  border: none;
+  padding: 25px 75px;
+  margin: 0;
+  font-size: 16px;
+}
+.club .container form input:first-child::-webkit-input-placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+.club .container form input:first-child::-moz-placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+.club .container form input:first-child:-ms-input-placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+.club .container form input:first-child::-ms-input-placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+.club .container form input:first-child::placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+.club .container form input:last-child {
+  border: none;
+  background-color: #2A254B;
+  color: white;
+  padding: 25px 15px;
+  height: 68px;
+  font-size: 16px;
+}
+.club .container form input:last-child:hover {
+  cursor: pointer;
+}
+
+.studio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.studio .container {
+  margin: 0;
+  margin-left: 125px;
+  width: 650px;
+}
+.studio .container .studio__left h2 {
+  font-size: 36px;
+}
+.studio .container .studio__left p {
+  font-size: 18px;
+}
+.studio .container .studio__left .btn {
+  margin: 0;
+  margin-top: 100px;
+}
+
+footer {
+  background-color: #2A254B;
+  color: white;
+  padding: 0;
+  padding-top: 50px;
+}
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-top: 0;
+}
+footer .container p {
+  font-weight: 700;
+}
+footer .container .list__links ul {
+  padding: 0;
+}
+footer .container .list__links ul li {
+  list-style: none;
+  padding: 0;
+  padding-top: 15px;
+}
+footer .container .list__links ul li a {
+  color: white;
+}
+footer .container .mailing p {
+  font-weight: 700;
+}
+footer .container .mailing form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .container .mailing form input:first-child {
+  background-color: rgb(249, 249, 249);
+  border: none;
+  padding: 25px 75px;
+  margin: 0;
+  font-size: 16px;
+}
+footer .container .mailing form input:first-child::-webkit-input-placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+footer .container .mailing form input:first-child::-moz-placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+footer .container .mailing form input:first-child:-ms-input-placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+footer .container .mailing form input:first-child::-ms-input-placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+footer .container .mailing form input:first-child::placeholder {
+  color: #BABABA;
+  font-size: 16px;
+  position: relative;
+  left: -40px;
+}
+footer .container .mailing form input:last-child {
+  border: none;
+  background-color: #2A254B;
+  color: white;
+  padding: 25px 15px;
+  height: 68px;
+  font-size: 16px;
+}
+footer .container .mailing form input:last-child:hover {
+  cursor: pointer;
+}
+footer .container .mailing form input:first-child {
+  background-color: rgba(249, 249, 249, 0.15);
+  color: white;
+}
+footer .container .mailing form input:first-child::-webkit-input-placeholder {
+  color: white;
+}
+footer .container .mailing form input:first-child::-moz-placeholder {
+  color: white;
+}
+footer .container .mailing form input:first-child:-ms-input-placeholder {
+  color: white;
+}
+footer .container .mailing form input:first-child::-ms-input-placeholder {
+  color: white;
+}
+footer .container .mailing form input:first-child::placeholder {
+  color: white;
+}
+footer .container .mailing form input:last-child {
+  background-color: white;
+  color: black;
+}
+
+.footer__bottom {
+  background-color: #2A254B;
+  border-top: 1px solid rgba(250, 250, 250, 0.15);
+  color: white;
+}
+.footer__bottom .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0;
+}
+.footer__bottom .container .social__links img {
+  margin-left: 15px;
 }

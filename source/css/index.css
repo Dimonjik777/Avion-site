@@ -81,6 +81,15 @@ header h1 {
 header .shop_login .shopping {
   margin-right: 15px;
 }
+header .shop_login .search {
+  display: none;
+}
+header .burger {
+  display: none;
+}
+header .burger img {
+  height: 32px;
+}
 
 nav {
   width: 645px;
@@ -145,6 +154,17 @@ nav .furniture a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.advantages .advantages__content .advantage__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .advantages .advantages__content .advantage {
   width: 270px;
 }
@@ -163,6 +183,9 @@ nav .furniture a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.ceramics .ceramics__content .ceramic__product img {
+  width: 90%;
+}
 
 .products h2 {
   margin-bottom: 35px;
@@ -178,11 +201,20 @@ nav .furniture a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.products .products__content .product img {
+  width: 90%;
+}
 
 .club {
   background-color: rgb(249, 249, 249);
-  padding: 100px 100px;
+  height: 700px;
   margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .club .container {
   background-color: white;
@@ -201,11 +233,14 @@ nav .furniture a {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 150px 150px;
+  margin: auto auto;
 }
 .club .container h1 {
   font-size: 48px;
   margin-bottom: 0;
   margin-top: 0;
+  text-align: center;
+  width: auto;
 }
 .club .container p {
   font-size: 24px;
@@ -300,6 +335,9 @@ nav .furniture a {
   margin: 0;
   margin-top: 100px;
 }
+.studio .container img {
+  margin-right: 20px;
+}
 
 footer {
   background-color: #2A254B;
@@ -317,6 +355,8 @@ footer .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -324,6 +364,9 @@ footer .container {
 }
 footer .container p {
   font-weight: 700;
+}
+footer .container .list__links {
+  margin-right: 10px;
 }
 footer .container .list__links ul {
   padding: 0;
@@ -424,7 +467,6 @@ footer .container .mailing form input:last-child {
 
 .footer__bottom {
   background-color: #2A254B;
-  border-top: 1px solid rgba(250, 250, 250, 0.15);
   color: white;
 }
 .footer__bottom .container {
@@ -437,8 +479,214 @@ footer .container .mailing form input:last-child {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-top: 1px solid rgba(250, 250, 250, 0.15);
   margin-top: 0;
 }
 .footer__bottom .container .social__links img {
   margin-left: 15px;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 1000px;
+  }
+  header {
+    width: 1000px;
+  }
+  .ceramics .ceramics__content .ceramic__product:last-child {
+    display: none;
+  }
+  .products .products__content .product:last-child {
+    display: none;
+  }
+  .studio .container .studio__left .btn {
+    margin-top: 25px;
+  }
+  .studio img {
+    margin-left: 25px;
+  }
+}
+@media (max-width: 1200px) {
+  .first__screen img {
+    width: 350px;
+  }
+  .studio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .studio .container {
+    margin-left: 0;
+  }
+  .studio .container .studio__left .btn {
+    margin: 20px auto;
+  }
+  .studio img {
+    margin: 0 auto;
+  }
+  .club {
+    height: auto;
+    background-color: #fff;
+    margin: 75px auto;
+  }
+  .club .container {
+    padding: 0;
+  }
+  .advantages .advantages__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .advantages .advantages__content .advantage__row {
+    margin-bottom: 30px;
+  }
+  .advantages .advantages__content .advantage__row .advantage:first-child {
+    margin-right: 150px;
+  }
+}
+@media (max-width: 1075px) {
+  .container {
+    width: auto;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  header {
+    width: auto;
+  }
+  header .search {
+    margin-left: 25px;
+  }
+  header .shop_login {
+    margin-right: 25px;
+  }
+  .products .container, .ceramics .container {
+    margin-right: 0;
+  }
+}
+@media (max-width: 975px) {
+  header {
+    width: auto;
+  }
+  .first__screen {
+    background-color: #2A254B;
+  }
+  .first__screen .container {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .first__screen .container img {
+    display: none;
+  }
+  .ceramics .ceramics__content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .ceramics .ceramics__content .ceramic__product:nth-child(3) {
+    display: none;
+  }
+  .products .products__content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .products .products__content .product:first-child {
+    display: none;
+  }
+  .products .products__content .product:last-child {
+    display: block;
+  }
+  .studio .container {
+    width: auto;
+  }
+  .studio img {
+    width: 100%;
+  }
+  footer .container .list__links {
+    margin-left: 20px;
+  }
+  footer .container .mailing {
+    margin-left: 20px;
+  }
+  .footer__bottom {
+    padding-top: 25px;
+  }
+  .footer__bottom p {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 875px) {
+  footer .container .mailing {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 705px) {
+  .first__screen .container {
+    margin-top: 0;
+  }
+  header h1 {
+    margin-left: 25px;
+  }
+  header .shop_login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .shop_login .login,
+  header .shop_login .shopping {
+    display: none;
+  }
+  header .shop_login .search {
+    margin-right: 25px;
+  }
+  header .shop_login .burger,
+  header .shop_login .search {
+    display: block;
+  }
+  header .search {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  .advantages .advantages__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .advantages .advantages__content .advantage__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .advantages .advantages__content .advantage__row .advantage:first-child {
+    margin: 0;
+  }
+}
+@media (max-width: 615px) {
+  h1 {
+    font-size: 26px;
+  }
+  .club .container h1 {
+    font-size: 26px;
+  }
+  .club .container p {
+    font-size: 18px;
+  }
 }

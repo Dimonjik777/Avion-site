@@ -56,6 +56,18 @@ header{
       margin-right: 15px;
     }
 
+    .search{
+      display: none;
+    }
+
+  }
+  .burger{
+    display: none;
+
+    img{
+      height: 32px;
+      
+    }
   }
 }
 
@@ -108,6 +120,10 @@ nav{
   .advantages__content{
     @include flex;
 
+    .advantage__row{
+      @include flex;
+    }
+
     .advantage{
       width: 270px;
     }
@@ -121,6 +137,13 @@ nav{
   }
   .ceramics__content{
     @include flex;
+
+    .ceramic__product{
+
+      img {
+        width: 90%;
+      }
+    }
   }
 }
 
@@ -131,13 +154,22 @@ nav{
   }
   .products__content{
     @include flex;
+
+    .product{
+
+      img {
+        width: 90%;
+      }
+    }
   }
 }
 
 .club{
   background-color: $grey;
-  padding: 100px 100px;
+  height: 700px;
   margin-top: 80px;
+  display: flex;
+  align-items: center;
 
   .container{
     background-color: white;
@@ -145,11 +177,14 @@ nav{
     @include flex;
     flex-direction: column;
     padding: 150px 150px;
+    margin: auto auto;
 
     h1{
       font-size: 48px;
       margin-bottom: 0;
       margin-top: 0;
+      text-align: center;
+      width: auto;
     }
 
     p{
@@ -189,6 +224,10 @@ nav{
         margin-top: 100px;
       }
     }
+
+    img{
+      margin-right: 20px;
+    }
   }
 }
 
@@ -201,6 +240,7 @@ footer{
   .container{
 
     @include flex;
+    flex-wrap: wrap;
     align-items: start;
     margin-top: 0;
 
@@ -209,6 +249,7 @@ footer{
     }
 
     .list__links{
+      margin-right: 10px;
       
       ul{
         padding: 0;
@@ -254,11 +295,12 @@ footer{
 
 .footer__bottom{
   background-color: $primary;
-  border-top: 1px solid rgba(250, 250, 250, 0.15);
+  
   color: white;
   
   .container{
     @include flex;
+    border-top: 1px solid rgba(250, 250, 250, 0.15);
     margin-top: 0;
 
     .social__links{
@@ -269,3 +311,6 @@ footer{
     }
   }
 }
+
+
+@import '_breakpoints';

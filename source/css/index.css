@@ -601,8 +601,15 @@ footer .container .mailing form input:last-child {
   .products .products__content .product:last-child {
     display: block;
   }
+  .club .container {
+    margin-right: 25px;
+    margin-left: 25px;
+    width: auto;
+  }
   .studio .container {
     width: auto;
+    margin-right: 25px;
+    margin-left: 25px;
   }
   .studio img {
     width: 100%;
@@ -683,10 +690,44 @@ footer .container .mailing form input:last-child {
   h1 {
     font-size: 26px;
   }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .studio .container .studio__left h2 {
+    font-size: 24px;
+  }
   .club .container h1 {
     font-size: 26px;
   }
   .club .container p {
     font-size: 18px;
+    width: auto;
+  }
+}
+@media (max-width: 520px) {
+  .club .container form input:first-child {
+    padding: 15px 55px;
+  }
+  .club .container form input:last-child {
+    height: 47px;
+    padding: 10px 15px;
+  }
+  footer .container .mailing form input:first-child {
+    padding: 15px 55px;
+  }
+  footer .container .mailing form input:last-child {
+    height: 47px;
+    padding: 10px 15px;
+  }
+  .footer__bottom .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__bottom .container .social__links {
+    display: none;
   }
 }
